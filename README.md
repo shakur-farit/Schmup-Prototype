@@ -5,7 +5,7 @@
 
 
 This prototype can be used for build any type of 2D schmup game. Also (after adding some mechanics) for 2D platformer.<br>
-Is developed on **Unity**.
+Was developed on **Unity**.
 <br><br>
 
 ## **INTRODUCED MECHANICS**
@@ -13,9 +13,9 @@ Is developed on **Unity**.
 Player movment with keyboard (WASD - Arrows). Have 5 different types:  
 1. Horizontal - *lock verticaly movement*
 2. Vertical - *lock horizontaly movement*
-3. Toward - *auto move with selected axis*
-4. Free Roam - *lock verticaly movement*
-5. Astroid - *lock verticaly movement*
+3. Toward - *Auto move with selected axis*
+4. Free Roam - *Free movement*
+5. Astroid - *Player moves forward/back in the direction they are facing and rotates with horizontal input*
 
 Enemy automaticly movment. Have 3 different types: 
 1. No Movement - *No moving*
@@ -36,7 +36,7 @@ Player have 2 types:
 1. Controling.
 2. Automatic.
    
-Enemy рave 2 types:
+Enemy have 2 types:
 1. None shoot.
 2. Shoot All - *From all weapons what it have*
 
@@ -77,7 +77,7 @@ With keyboard *esc* and with button *for touch*
 ### **UI**
 1. Main menu panel of Start page - *Play, Settings, About, Quit*
 2. Level Map Selection page.
-3. Level Map *level selection* page.
+3. Level Map *(level selection)* page.
 4. Pause panel.
 <br><br>
 
