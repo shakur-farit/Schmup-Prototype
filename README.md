@@ -27,7 +27,7 @@ Player have 2 types:
 1. Aim Toward Mouse - *Look at mouse cursor*
 2. Aim Fowards - *In one derection*
 
-![Aim of enemy whether target to follow or not](https://github.com/shakur-farit/Schmup-Prototype/blob/shakur-farit-addScreenshots/Screenshots/AimEnem.jpg)
+![](https://github.com/shakur-farit/Schmup-Prototype/blob/shakur-farit-addScreenshots/Screenshots/AimEnem.jpg)
 
 Enemy have 2 types:
 1. Aim To Player - *If follow target*
