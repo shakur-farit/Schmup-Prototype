@@ -84,10 +84,14 @@ If use static camera and need to Player no move out of camera vision, used board
 1. Projetiles - *Machinegun, Fireball*
 2. Laser.
 3. Laser's Shoot and Damage.
+4. Projetiles's *(Machinegun, Fireball)* Shoot and Damage.
 
 ![](https://github.com/shakur-farit/Schmup-Prototype/blob/shakur-farit-addScreenshots/Screenshots/Machinegun.jpg)
 ![](https://github.com/shakur-farit/Schmup-Prototype/blob/shakur-farit-addScreenshots/Screenshots/fireball.jpg)
 ![](https://github.com/shakur-farit/Schmup-Prototype/blob/shakur-farit-addScreenshots/Screenshots/Laser.jpg)
+![](https://github.com/shakur-farit/Schmup-Prototype/blob/main/Screenshots/MachinegunEffectsDamageAndShoot.jpg)
+![](https://github.com/shakur-farit/Schmup-Prototype/blob/main/Screenshots/FireballShootEffect.jpg)
+![](https://github.com/shakur-farit/Schmup-Prototype/blob/main/Screenshots/FireballDamageEffect.jpg)
 
 ### **Pause**
 With keyboard *esc* and with button *for touch*
