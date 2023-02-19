@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// A class of laser projectile.
+/// </summary>
 public class LaserProjectile : Projectile { 
 
     [Header("Component Settings")]

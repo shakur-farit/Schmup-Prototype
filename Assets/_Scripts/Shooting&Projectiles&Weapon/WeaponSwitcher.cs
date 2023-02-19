@@ -42,10 +42,8 @@ public class WeaponSwitcher : MonoBehaviour
                 else
                 {
                     Debug.Log("You need atach Weapon type game object with " + indexOfDropedWeapon + " index to WeaponSwitcher type game object.");
-                }
-            
+                }           
             }
-
             currentWeaponIndex = indexOfDropedWeapon;
         }
     }

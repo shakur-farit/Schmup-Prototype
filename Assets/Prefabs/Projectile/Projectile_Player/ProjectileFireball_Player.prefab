@@ -4907,6 +4907,7 @@ GameObject:
   - component: {fileID: 3348699089358194297}
   - component: {fileID: 3348699089358194296}
   - component: {fileID: 3348699089358194299}
+  - component: {fileID: 8800808365544831643}
   - component: {fileID: 1914299069450953411}
   m_Layer: 0
   m_Name: ProjectileFireball_Player
@@ -4966,6 +4967,21 @@ MonoBehaviour:
   teamId: 0
   damageAmount: 2
   destroyAfterDamage: 1
+--- !u!114 &8800808365544831643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3348699089358194278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f7168113003b674c8afb6cb7bf4306a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootVFX: {fileID: 6681254937285586991, guid: 1cd57e508872aec4c9d35d63d8c627c1, type: 3}
+  damageVFX: {fileID: 2422181783272089186, guid: cafa7f54a9658404e92bd57e853e8b64, type: 3}
+  _VFXHolder: {fileID: 0}
 --- !u!58 &1914299069450953411
 CircleCollider2D:
   m_ObjectHideFlags: 0

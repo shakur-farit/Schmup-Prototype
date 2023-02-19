@@ -45,7 +45,7 @@ public class InputManager : MonoBehaviour
         firePressed = default;
         fireHeld = default;
 
-        pausePressed = default;
+        //pausePressed = default;
     }
 
     [Header("Player Movement Input")]
@@ -121,26 +121,26 @@ public class InputManager : MonoBehaviour
         firePressed = false;
     }
 
-    [Header("Pause Input")]
-    public bool pausePressed;
-    public void ReadPauseInput(InputAction.CallbackContext context)
-    {
-        pausePressed = !context.canceled;
-        StartCoroutine(ResetPausePressed());
-    }
+    //[Header("Pause Input")]
+    //public bool pausePressed;
+    //public void ReadPauseInput(InputAction.CallbackContext context)
+    //{
+    //    pausePressed = !context.canceled;
+    //    StartCoroutine(ResetPausePressed());
+    //}
 
-    /// <summary>
-    /// Description
-    /// Coroutine that resets the pause pressed variable at the end of the frame
-    /// Inputs:
-    /// none
-    /// Returns: 
-    /// IEnumerator
-    /// </summary>
-    /// <returns>IEnumerator: Allows this to function as a coroutine</returns>
-    IEnumerator ResetPausePressed()
-    {
-        yield return new WaitForEndOfFrame();
-        pausePressed = false;
-    }
+    ///// <summary>
+    ///// Description
+    ///// Coroutine that resets the pause pressed variable at the end of the frame
+    ///// Inputs:
+    ///// none
+    ///// Returns: 
+    ///// IEnumerator
+    ///// </summary>
+    ///// <returns>IEnumerator: Allows this to function as a coroutine</returns>
+    //IEnumerator ResetPausePressed()
+    //{
+    //    yield return new WaitForEndOfFrame();
+    //    pausePressed = false;
+    //}
 }

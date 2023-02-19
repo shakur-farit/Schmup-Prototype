@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// A class which controlls player aiming and shooting with laser.
+/// </summary>
 public class LaserShootingController : ShootingController
 {
     private LaserProjectile laserProj;
@@ -104,16 +107,16 @@ public class LaserShootingController : ShootingController
                     laserDamageVFXEnabled = true;
                 }
 
-                laserEffects.DamageVFXPositionUpdate(laserProj._lineRenderer.GetPosition(1));
+                laserEffects.DamageVFXPositionUpdate(laserProj._lineRenderer.GetPosition(1), laserProj._lineRenderer.transform.rotation);
             }
         }
         else 
-        { 
+        {
             laserEffects.DamageVFXDestroy();
             laserDamageVFXEnabled=false;
         }
 
-        laserEffects.ShootVFXPositionUpdate();
+        laserEffects.ShootVFXPositionUpdate(laserProj._lineRenderer.GetPosition(0), laserProj._lineRenderer.transform.rotation);
 
     }
 
@@ -126,8 +129,8 @@ public class LaserShootingController : ShootingController
         laserProj._lineRenderer.enabled = false;
 
         laserEffects.ShootVFXDestroy();
-
         laserEffects.DamageVFXDestroy();
+
         laserDamageVFXEnabled = false;
     }
 

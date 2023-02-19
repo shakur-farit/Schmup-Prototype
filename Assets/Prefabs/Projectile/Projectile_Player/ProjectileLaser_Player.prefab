@@ -168,7 +168,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teamId: 0
   damageAmount: 3
-  hitEffect: {fileID: 0}
   destroyAfterDamage: 0
 --- !u!114 &5654184425530489832
 MonoBehaviour:
@@ -184,6 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootVFX: {fileID: 2602262602306635375, guid: f922769be4c25f44fba92c00addc430e, type: 3}
   damageVFX: {fileID: 993330607424577974, guid: d65abec4a724211419606ca093b0bf57, type: 3}
+  _VFXHolder: {fileID: 0}
 --- !u!1 &4989838842377353051
 GameObject:
   m_ObjectHideFlags: 0

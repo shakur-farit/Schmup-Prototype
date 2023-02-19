@@ -61,7 +61,8 @@ public class Damage : MonoBehaviour
 
                 if (gameObject.GetComponent<ShootDamageVFX>() != null)
                 {
-                    gameObject.GetComponent<ShootDamageVFX>().DamageVFXInstantiate(gameObject);
+                    ShootDamageVFX effect = gameObject.GetComponent<ShootDamageVFX>();
+                    effect.DamageVFXInstantiate(gameObject);
                 }
 
                 if (destroyAfterDamage)

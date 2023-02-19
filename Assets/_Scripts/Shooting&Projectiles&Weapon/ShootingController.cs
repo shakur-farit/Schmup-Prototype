@@ -6,8 +6,6 @@ using UnityEngine;
 /// </summary>
 public class ShootingController : MonoBehaviour
 {
-    #region Fields
-
     [Header("GameObject/Component References")]
     [Tooltip("The projectile to be fired.")]
     public GameObject projectilePrefab = null;
@@ -32,9 +30,8 @@ public class ShootingController : MonoBehaviour
     //The input manager which manages player input
     private InputManager inputManager = null;
 
-    #endregion
 
-    #region Private Methods
+
     /// <summary>
     /// Description:
     /// Standard unity function that runs every frame
@@ -60,9 +57,6 @@ public class ShootingController : MonoBehaviour
     {
         SetupInput();
         FindProjectileHolder();
-        
-
-
     }
 
     /// <summary>
@@ -132,9 +126,7 @@ public class ShootingController : MonoBehaviour
             Fire();
         }
     }
-    #endregion
 
-    #region Public Methods
     /// <summary>
     /// Description:
     /// Fires a projectile if possible
@@ -153,8 +145,8 @@ public class ShootingController : MonoBehaviour
 
             if (projectilePrefab.GetComponent<ShootDamageVFX>() != null)
             {
-                projectilePrefab.GetComponent<ShootDamageVFX>().ShootVFXInstantiate(gameObject);
-
+                ShootDamageVFX effect = projectilePrefab.GetComponent<ShootDamageVFX>();
+                effect.ShootVFXInstantiate(gameObject);                
             }
 
             // Restart the cooldown
@@ -188,5 +180,4 @@ public class ShootingController : MonoBehaviour
                 projectileGameObject.gameObject.transform.SetParent(projectileHolder.transform);   
         }
     }
-    #endregion
 }

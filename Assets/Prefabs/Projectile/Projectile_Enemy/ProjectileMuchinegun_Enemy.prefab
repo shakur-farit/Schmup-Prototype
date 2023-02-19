@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -2753144644012406963}
   - component: {fileID: 4351664564499281344}
   - component: {fileID: 1891274227376202046}
+  - component: {fileID: 4989310546611577513}
   m_Layer: 0
   m_Name: ProjectileMuchinegun_Enemy
   m_TagString: Untagged
@@ -142,5 +143,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teamId: 1
   damageAmount: 1
-  hitEffect: {fileID: 0}
   destroyAfterDamage: 1
+--- !u!114 &4989310546611577513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6236879698800701797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f7168113003b674c8afb6cb7bf4306a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootVFX: {fileID: 1414364240383433128, guid: 5756ffa33bdf69343a6f6435a1614b76, type: 3}
+  damageVFX: {fileID: 8475264209838266135, guid: 68773aea5f59a9b4685348be504f6988, type: 3}
+  _VFXHolder: {fileID: 0}

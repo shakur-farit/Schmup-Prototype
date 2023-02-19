@@ -156,5 +156,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7168113003b674c8afb6cb7bf4306a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootVFX: {fileID: 0}
-  damageVFX: {fileID: 0}
+  shootVFX: {fileID: 1414364240383433128, guid: c2c79e51a5cc5704193d88b91751d7b1, type: 3}
+  damageVFX: {fileID: 8475264209838266135, guid: 34503412ca225ec4aac00ebe8a9a8576, type: 3}

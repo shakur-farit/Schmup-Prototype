@@ -1,7 +1,9 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Class which instantiate and controll shoot and damage effects of projectiles.
+/// </summary>
 public class ShootDamageVFX : MonoBehaviour
 {
     [Header("Component Settings")]
@@ -9,11 +11,12 @@ public class ShootDamageVFX : MonoBehaviour
     public GameObject shootVFX;
     [Tooltip("Visual effect for damage.")]
     public GameObject damageVFX;
+    [Tooltip("The transform in the heirarchy which holds VFX if any")]
+    public GameObject _VFXHolder = null;
 
     // Containers for shoot/damage VFX.
     protected GameObject shootVFXCont;
     protected GameObject damageVFXCont;
-
 
 
 
@@ -25,7 +28,12 @@ public class ShootDamageVFX : MonoBehaviour
         if (shootVFX != null)
         {
             shootVFXCont = Instantiate(shootVFX, posForInst.transform.position, posForInst.transform.rotation);
-        }
+
+            FindVFXHolder();
+
+            if (_VFXHolder != null)
+                shootVFXCont.gameObject.transform.SetParent(_VFXHolder.transform);
+        }      
     }
 
     /// <summary>
@@ -36,6 +44,28 @@ public class ShootDamageVFX : MonoBehaviour
         if (damageVFX != null)
         {
             damageVFXCont = Instantiate(damageVFX, posForInst.transform.position, posForInst.transform.rotation);
+
+            FindVFXHolder();
+
+            if (_VFXHolder != null)
+                damageVFXCont.gameObject.transform.SetParent(_VFXHolder.transform);
         }
+    }
+
+    /// <summary>
+    /// Description:
+    /// Attempts to find VFXHolder in hierarchy to hold VFXeffect's game objects.
+    /// Inputs:
+    /// none
+    /// Returns:
+    /// void (no return)
+    /// </summary>
+    private void FindVFXHolder()
+    {
+        if(_VFXHolder == null)
+            _VFXHolder = GameObject.Find("VFXHolder");
+
+        if (_VFXHolder == null)
+             Debug.Log("Create the Empty Object with \"VFXHolder\" name to hold VFX objects in it. ");
     }
 }

@@ -44,11 +44,20 @@ public class Weapon : MonoBehaviour
         }
         else // If droped index more than number of weapon power levels...
         {
-            // Activete last power level.
-            weaponPowerLevels[weaponPowerLevels.Length -1].gameObject.SetActive(true);
-            currentPowerLevel = indexOfDropedPowerLevel;
-        }
-
-        
+            for (int i = 0; i < weaponPowerLevels.Length; i++)
+            {
+                if (i == weaponPowerLevels.Length - 1)
+                {
+                    // Activete last power level.
+                    weaponPowerLevels[i].gameObject.SetActive(true);
+                    currentPowerLevel = indexOfDropedPowerLevel;
+                }
+                else
+                {
+                    // Deactivate power level.
+                    weaponPowerLevels[i].gameObject.SetActive(false);
+                }
+            }
+        } 
     }
 }

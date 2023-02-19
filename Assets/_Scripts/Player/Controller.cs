@@ -7,8 +7,6 @@ using UnityEditor;
 /// </summary>
 public class Controller : MonoBehaviour
 {
-    #region Fileds
-
     [Header("GameObject/Component References")]
     [Tooltip("The animator controller used to animate the player.")]
     public RuntimeAnimatorController animator = null;
@@ -44,9 +42,8 @@ public class Controller : MonoBehaviour
 
     //The InputManager to read input from
     private InputManager inputManager;
-    #endregion
 
-    #region Proporties
+
     // Whether the player can aim with the mouse or not
     private bool canAimWithMouse { get { return aimMode == AimModes.AimTowardsMouse; } }
 
@@ -61,9 +58,7 @@ public class Controller : MonoBehaviour
 
     // Whether the player move in Y cordinate.  (Also assign in rigidbody)
     private bool moveToYCordinate { get { return towardMovementMode == TowardMovementModes.VerticallyMove; } }
-    #endregion
 
-    #region Methods
     private void Start()
     {
         SetupInput();
@@ -133,7 +128,6 @@ public class Controller : MonoBehaviour
         }
     }
 
-    #region Mouse Position
     /// <summary>
     /// Description:
     /// Updates the position the player is looking at
@@ -186,9 +180,7 @@ public class Controller : MonoBehaviour
             }
         }
     }
-    #endregion
 
-    #region Movement
     /// <summary>
     /// Description:
     /// Moves the player
@@ -258,9 +250,6 @@ public class Controller : MonoBehaviour
             transform.position = transform.position + (movement * Time.deltaTime * moveSpeed);
         }
     }
-    #endregion
-
-    #endregion
 }
 
 
