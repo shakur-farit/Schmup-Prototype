@@ -6,7 +6,7 @@ using UnityEngine;
 public class LaserShootingController : ShootingController
 {
     private LaserProjectile laserProj;
-    private LaserShootDamageVFX laserEffects;
+    private LaserShootDamageVFX laserVFX;
     private bool laserEnabled = false;
     private bool laserDamageVFXEnabled = false;
     private int damageAmount;
@@ -70,7 +70,7 @@ public class LaserShootingController : ShootingController
     {
         laserProj._lineRenderer.enabled = true;
 
-        laserEffects.ShootVFXInstantiate(gameObject);
+        laserVFX.ShootVFXInstantiate(gameObject);
 
     }
 
@@ -103,20 +103,20 @@ public class LaserShootingController : ShootingController
 
                 if (!laserDamageVFXEnabled)
                 {
-                    laserEffects.DamageVFXInstantiate(gameObject);
+                    laserVFX.DamageVFXInstantiate(gameObject);
                     laserDamageVFXEnabled = true;
                 }
 
-                laserEffects.DamageVFXPositionUpdate(laserProj._lineRenderer.GetPosition(1), laserProj._lineRenderer.transform.rotation);
+                laserVFX.DamageVFXPositionUpdate(laserProj._lineRenderer.GetPosition(1), laserProj._lineRenderer.transform.rotation);
             }
         }
         else 
         {
-            laserEffects.DamageVFXDestroy();
+            laserVFX.DamageVFXDestroy();
             laserDamageVFXEnabled=false;
         }
 
-        laserEffects.ShootVFXPositionUpdate(laserProj._lineRenderer.GetPosition(0), laserProj._lineRenderer.transform.rotation);
+        laserVFX.ShootVFXPositionUpdate(laserProj._lineRenderer.GetPosition(0), laserProj._lineRenderer.transform.rotation);
 
     }
 
@@ -128,8 +128,8 @@ public class LaserShootingController : ShootingController
          Debug.Log("Dis");
         laserProj._lineRenderer.enabled = false;
 
-        laserEffects.ShootVFXDestroy();
-        laserEffects.DamageVFXDestroy();
+        laserVFX.ShootVFXDestroy();
+        laserVFX.DamageVFXDestroy();
 
         laserDamageVFXEnabled = false;
     }
@@ -140,7 +140,7 @@ public class LaserShootingController : ShootingController
     private void SetUpComponents()
     {
         laserProj = projectilePrefab.GetComponent<LaserProjectile>();
-        laserEffects = projectilePrefab.GetComponent<LaserShootDamageVFX>();
+        laserVFX = projectilePrefab.GetComponent<LaserShootDamageVFX>();
         enemyLayer = 1 << LayerMask.NameToLayer("Enemy");
         damageAmount = GetComponentInChildren<Damage>().damageAmount;
     }

@@ -1532,7 +1532,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &854444612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1628,6 +1628,7 @@ GameObject:
   - component: {fileID: 860057736}
   - component: {fileID: 860057735}
   - component: {fileID: 860057737}
+  - component: {fileID: 860057738}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1677,6 +1678,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b918f3af05aca0438cb20cc8f6f3b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &860057738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860057734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb336da0d01b2c543a51e49b55747072, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentScore: 0
+  highScore: 0
 --- !u!4 &860723217 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1779331589491351574, guid: 77e2c4e7a8ac5004c9a8a947332204cd, type: 3}
@@ -3187,8 +3202,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teamId: 1
-  currentHealth: 10000
-  maximumHealth: 10000
+  currentHealth: 3
+  maximumHealth: 5
   deathEffect: {fileID: 0}
   hitEffect: {fileID: 0}
 --- !u!114 &1767507307
@@ -3417,8 +3432,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teamId: 1
-  currentHealth: 10000
-  maximumHealth: 100000
+  currentHealth: 3
+  maximumHealth: 5
   deathEffect: {fileID: 0}
   hitEffect: {fileID: 0}
 --- !u!114 &1941595947

@@ -116,10 +116,10 @@ public class Enemy : MonoBehaviour
     /// </summary>
     private void AddToScore()
     {
-        //if (GameManager.instance != null && !GameManager.instance.gameIsOver)
-        //{
-        //    GameManager.AddScore(scoreValue);
-        //}
+        if (GameManager.instance != null /*&& !GameManager.instance.gameIsOver*/)
+        {
+            GameManager.instance.GetComponent<Score>().AddScore(scoreValue);
+        }
     }
 
     /// <summary>

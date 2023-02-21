@@ -1,7 +1,7 @@
 using UnityEngine;
 
 /// <summary>
-/// Class which instantiate and controll shoot and damage effects of laser.
+/// Class which instantiate and controll shoot and damage VFX of laser.
 /// </summary>
 public class LaserShootDamageVFX : ShootDamageVFX
 {
@@ -58,7 +58,7 @@ public class LaserShootDamageVFX : ShootDamageVFX
     }
 
     /// <summary>
-    /// Destroy shoot effect of laser.
+    /// Destroy shoot VFX of laser.
     /// </summary>
     public void ShootVFXDestroy()
     {
@@ -66,7 +66,7 @@ public class LaserShootDamageVFX : ShootDamageVFX
     }
 
     /// <summary>
-    /// Destroy damage effect of laser.
+    /// Destroy damage VFX of laser.
     /// </summary>
     public void DamageVFXDestroy()
     {

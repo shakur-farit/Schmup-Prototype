@@ -1,8 +1,7 @@
-using System.Collections;
 using UnityEngine;
 
 /// <summary>
-/// Class which instantiate and controll shoot and damage effects of projectiles.
+/// Class which instantiate and controll shoot and damage VFX of projectiles.
 /// </summary>
 public class ShootDamageVFX : MonoBehaviour
 {
@@ -21,7 +20,7 @@ public class ShootDamageVFX : MonoBehaviour
 
 
     /// <summary>
-    /// Instatiat shoot effect of projectile.
+    /// Instatiat shoot VFX of projectile.
     /// </summary>
     public virtual void ShootVFXInstantiate( GameObject posForInst)
     {
@@ -37,7 +36,7 @@ public class ShootDamageVFX : MonoBehaviour
     }
 
     /// <summary>
-    /// Instatiat damage effect of projectile.
+    /// Instatiat damage VFX of projectile.
     /// </summary>
     public virtual void DamageVFXInstantiate(GameObject posForInst)
     {

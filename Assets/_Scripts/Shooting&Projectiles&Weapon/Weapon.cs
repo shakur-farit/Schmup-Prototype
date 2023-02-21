@@ -10,7 +10,7 @@ public class Weapon : MonoBehaviour
     public int weaponIndex;
     [Tooltip("Weapon's power levels.")]
     public WeaponPowerLevel[] weaponPowerLevels;
-    //[HideInInspector]
+    [HideInInspector]
     public int currentPowerLevel = 1;
 
     /// <summary>

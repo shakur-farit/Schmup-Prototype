@@ -143,10 +143,11 @@ public class ShootingController : MonoBehaviour
             // Launches a projectile
             SpawnProjectile();
 
+            // If projectile has damage VFX instantiate it
             if (projectilePrefab.GetComponent<ShootDamageVFX>() != null)
             {
-                ShootDamageVFX effect = projectilePrefab.GetComponent<ShootDamageVFX>();
-                effect.ShootVFXInstantiate(gameObject);                
+                ShootDamageVFX _VFX = projectilePrefab.GetComponent<ShootDamageVFX>();
+                _VFX.ShootVFXInstantiate(gameObject);                
             }
 
             // Restart the cooldown
