@@ -17,40 +17,40 @@ Player movment with keyboard (WASD - Arrows). Have 5 different types:
 4. Free Roam - *Free movement*
 5. Astroid - *Player moves forward/back in the direction they are facing and rotates with horizontal input*
 
-![](https://github.com/shakur-farit/Schmup-Prototype/blob/shakur-farit-addScreenshots/Screenshots/MovePlayer.jpg)
+![](https://github.com/shakur-farit/Schmup-Prototype/blob/main/Screenshots/MovePlayer.jpg)
 
 Enemy automaticly movment. Have 3 different types: 
 1. No Movement - *No moving*
 2. Follow Target - *Follow to attached target (usually Player)*
 3. Scroll - *Enemy will move in one direction only*
 
-![](https://github.com/shakur-farit/Schmup-Prototype/blob/shakur-farit-addScreenshots/Screenshots/MoveEn.png)
+![](https://github.com/shakur-farit/Schmup-Prototype/blob/main/Screenshots/MoveEn.png)
 
 ### **Aim**
 Player have 2 types:
 1. Aim Toward Mouse - *Look at mouse cursor*
 2. Aim Fowards - *In one derection*
 
-![](https://github.com/shakur-farit/Schmup-Prototype/blob/shakur-farit-addScreenshots/Screenshots/AimPlayer.jpg)
+![](https://github.com/shakur-farit/Schmup-Prototype/blob/main/Screenshots/AimPlayer.jpg)
 
 Enemy have 2 types:
 1. Aim To Player - *If follow target*
 2. Aim Forwards - *In one derection*
 
-![](https://github.com/shakur-farit/Schmup-Prototype/blob/shakur-farit-addScreenshots/Screenshots/AimEnem.jpg)
+![](https://github.com/shakur-farit/Schmup-Prototype/blob/main/Screenshots/AimEnem.jpg)
 
 ### **Shooting**
 Player have 2 types: 
 1. Controling.
 2. Automatic.
 
-![](https://github.com/shakur-farit/Schmup-Prototype/blob/shakur-farit-addScreenshots/Screenshots/ShootPlayer.jpg)
+![](https://github.com/shakur-farit/Schmup-Prototype/blob/main/Screenshots/ShootPlayer.jpg)
    
 Enemy have 2 types:
 1. None shoot.
 2. Shoot All - *From all weapons what it have*
 
-![](https://github.com/shakur-farit/Schmup-Prototype/blob/shakur-farit-addScreenshots/Screenshots/ShootEnemy.jpg)
+![](https://github.com/shakur-farit/Schmup-Prototype/blob/main/Screenshots/ShootEnemy.jpg)
 
 ### **Weapons**
 Have 3 types:
@@ -75,7 +75,7 @@ Lose and recieve health.
 3. Health - *Small, Large*
 4. Shield.
 
-![](https://github.com/shakur-farit/Schmup-Prototype/blob/shakur-farit-addScreenshots/Screenshots/Drop.jpg)
+![](https://github.com/shakur-farit/Schmup-Prototype/blob/main/Screenshots/Drop.jpg)
 
 ### **Camera's boards checking**
 If use static camera and need to Player no move out of camera vision, used board checking.
@@ -84,10 +84,12 @@ If use static camera and need to Player no move out of camera vision, used board
 1. Projetiles - *Machinegun, Fireball*
 2. Laser.
 3. Laser's Shoot and Damage.
+4. Projetiles's *(Machinegun, Fireball)* Shoot and Damage.
 
-![](https://github.com/shakur-farit/Schmup-Prototype/blob/shakur-farit-addScreenshots/Screenshots/Machinegun.jpg)
-![](https://github.com/shakur-farit/Schmup-Prototype/blob/shakur-farit-addScreenshots/Screenshots/fireball.jpg)
-![](https://github.com/shakur-farit/Schmup-Prototype/blob/shakur-farit-addScreenshots/Screenshots/Laser.jpg)
+![](https://github.com/shakur-farit/Schmup-Prototype/blob/main/Screenshots/Laser.jpg)
+![](https://github.com/shakur-farit/Schmup-Prototype/blob/main/Screenshots/MachinegunEffectsDamageAndShoot.jpg)
+![](https://github.com/shakur-farit/Schmup-Prototype/blob/main/Screenshots/FireballShootEffect.jpg)
+![](https://github.com/shakur-farit/Schmup-Prototype/blob/main/Screenshots/FireballDamageEffect.jpg)
 
 ### **Pause**
 With keyboard *esc* and with button *for touch*
@@ -98,10 +100,10 @@ With keyboard *esc* and with button *for touch*
 3. Level Selection page.
 4. Pause panel.
 
-![](https://github.com/shakur-farit/Schmup-Prototype/blob/shakur-farit-addScreenshots/Screenshots/MainMenu.jpg)
-![](https://github.com/shakur-farit/Schmup-Prototype/blob/shakur-farit-addScreenshots/Screenshots/Map%20selection.jpg)
-![](https://github.com/shakur-farit/Schmup-Prototype/blob/shakur-farit-addScreenshots/Screenshots/Level%20selection.jpg)
-![](https://github.com/shakur-farit/Schmup-Prototype/blob/shakur-farit-addScreenshots/Screenshots/pause.jpg)
+![](https://github.com/shakur-farit/Schmup-Prototype/blob/main/Screenshots/MainMenu.jpg)
+![](https://github.com/shakur-farit/Schmup-Prototype/blob/main/Screenshots/Map%20selection.jpg)
+![](https://github.com/shakur-farit/Schmup-Prototype/blob/main/Screenshots/Level%20selection.jpg)
+![](https://github.com/shakur-farit/Schmup-Prototype/blob/main/Screenshots/pause.jpg)
 
 ## **PACKAGES**
 1. For InputReading used Input System package v1.4.3
@@ -113,4 +115,4 @@ With keyboard *esc* and with button *for touch*
 ## **SCREENSHOTS**
 
 Laser Shader:
-![](https://github.com/shakur-farit/Schmup-Prototype/blob/shakur-farit-addScreenshots/Screenshots/Laser%20shader.jpg)
+![](https://github.com/shakur-farit/Schmup-Prototype/blob/main/Screenshots/Laser%20shader.jpg)
