@@ -101,9 +101,9 @@ With keyboard *esc* and with button *for touch*
 4. Pause panel.
 
 ![](https://github.com/shakur-farit/Schmup-Prototype/blob/main/Screenshots/MainMenu.jpg)
+![](https://github.com/shakur-farit/Schmup-Prototype/blob/main/Screenshots/pause.jpg)
 ![](https://github.com/shakur-farit/Schmup-Prototype/blob/main/Screenshots/Map%20selection.jpg)
 ![](https://github.com/shakur-farit/Schmup-Prototype/blob/main/Screenshots/Level%20selection.jpg)
-![](https://github.com/shakur-farit/Schmup-Prototype/blob/main/Screenshots/pause.jpg)
 
 ## **PACKAGES**
 1. For InputReading used Input System package v1.4.3
