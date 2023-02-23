@@ -5,7 +5,7 @@
 
 
 This prototype can be used for building any type of 2D shmup game. Also (after adding some mechanics) for 2D platformer.<br>
-This prototype was developed on **Unity**.
+It was developed on **Unity**.
 <br><br>
 
 ## **INTRODUCED MECHANICS**
