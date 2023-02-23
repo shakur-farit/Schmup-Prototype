@@ -6,8 +6,7 @@ using UnityEngine;
 public class GameEvents : MonoBehaviour
 {
     //Buttons events.
-    public delegate void buttonsAction();
-    public static event buttonsAction OnBackButton;
+    public delegate void buttonsAction();  
     public static event buttonsAction OnQuitButton;
     public static event buttonsAction OnPauseButton;
     public static event buttonsAction OnResumeButton;
@@ -16,6 +15,7 @@ public class GameEvents : MonoBehaviour
     public delegate void loadByNameAction(string name);
     public static event loadByNameAction OnLoadLevel;
     public static event loadByNameAction OnShowPopupPanel;
+    public static event loadByNameAction OnBackButton;
 
 
 
@@ -25,10 +25,10 @@ public class GameEvents : MonoBehaviour
             OnShowPopupPanel(popupPanelName);
     }
 
-    public void ClosePopupPanel()
+    public void ClosePopupPanel(string popupPanelName)
     {
         if (OnBackButton != null)
-            OnBackButton();
+            OnBackButton(popupPanelName);
     }
 
     public void LoadLevel(string levelToLoadName)

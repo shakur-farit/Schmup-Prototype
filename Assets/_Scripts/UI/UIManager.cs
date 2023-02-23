@@ -9,11 +9,13 @@ public class UIManager : MonoBehaviour
 
     private void OnEnable()
     {
+        GameEvents.OnBackButton += ClosePopupPanel;
         GameEvents.OnShowPopupPanel += ShowPopupPanel;
     }
 
     private void OnDisable()
     {
+        GameEvents.OnBackButton -= ClosePopupPanel;
         GameEvents.OnShowPopupPanel -= ShowPopupPanel;
     }
 
@@ -39,7 +41,26 @@ public class UIManager : MonoBehaviour
             if (uiPopupPanels[i].popupPanelName == nameOfPopup)
             {
                 uiPopupPanels[i].gameObject.SetActive(true);
-                Debug.Log("Showing");
+            }
+        }
+    }
+
+    /// <summary>
+    /// Description:
+    /// Disable popup panel.
+    /// Input:
+    /// string nameOfPopup
+    /// Returns:
+    /// void (no return)
+    /// </summary>
+    /// <param name="nameOfPopup"> Name of opening popup panel.</param>
+    private void ClosePopupPanel(string nameOfPopup)
+    {
+        for (int i = 0; i < uiPopupPanels.Length; i++)
+        {
+            if (uiPopupPanels[i].popupPanelName == nameOfPopup)
+            {
+                uiPopupPanels[i].PlayPopupDisappearAnimation();
             }
         }
     }

@@ -103,7 +103,8 @@ public class Enemy : MonoBehaviour
     public void DoBeforeDestroy()
     {
         AddToScore();
-        IncrementEnemiesDefeated();
+        IncrementDefeatedEnemies();
+        CheckLevelWin();
     }
 
     /// <summary>
@@ -130,12 +131,23 @@ public class Enemy : MonoBehaviour
     /// Return:
     /// void (no return)
     /// </summary>
-    private void IncrementEnemiesDefeated()
+    private void IncrementDefeatedEnemies()
     {
-        //if (GameManager.instance != null && !GameManager.instance.gameIsOver)
-        //{
-        //    GameManager.instance.IncrementEnemiesDefeated();
-        //}
+        if (GameManager.instance != null)
+        {
+            GameManager.instance.GetComponent<LevelWinable>().IncrementDefeatedEnemies();
+        }
+    }
+
+     /// <summary>
+     /// Check whether conditions for level win or not.
+     /// </summary>
+    private void CheckLevelWin()
+    {
+        if(GameManager.instance.GetComponent<LevelWinable>().defeatedEnemies >= GameManager.instance.GetComponent<LevelWinable>().defeatForWin)
+        {
+            GameManager.instance.GetComponent<LevelWinable>().WinLevel("Win");
+        }
     }
 
     /// <summary>
