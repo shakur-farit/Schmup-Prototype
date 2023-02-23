@@ -81,7 +81,7 @@ Lose and recieve health.
 While using static camera if you need Player not to go out of camera vision use border checking.
 
 ### **Score System**
-It count current score and save largest value *(Use Player Prefs)*
+It counts current score and saves largest value *(Use Player Prefs)*
 
 ### **Effects**
 1. Projectiles - *Machinegun, Fireball*
