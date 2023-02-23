@@ -77,11 +77,14 @@ Lose and recieve health.
 
 ![](https://github.com/shakur-farit/Schmup-Prototype/blob/main/Screenshots/Drop.jpg)
 
-### **Camera's borders checking**
-While using static camera if you need Player not to go out of camera vision use border checking.
+### **Camera's bounds checking**
+While using static camera if you need Player not to go out of camera vision use bounds checking.
 
 ### **Score System**
 It counts current score and saves largest value *(Uses Player Prefs)*
+
+### **Level Winnable System**
+It is triggered after the specified number of enemies have been destroyed.
 
 ### **Effects**
 1. Projectiles - *Machinegun, Fireball*
