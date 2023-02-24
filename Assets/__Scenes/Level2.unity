@@ -4987,6 +4987,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2065390350}
+    - target: {fileID: 1669705421011879657, guid: b6b0922e8bb42b447b0758bf8d2ce069, type: 3}
+      propertyPath: levelIndex
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1669705421011879658, guid: b6b0922e8bb42b447b0758bf8d2ce069, type: 3}
       propertyPath: levelButtons.Array.data[0]
       value: 

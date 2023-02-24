@@ -41,6 +41,7 @@ public class UIManager : MonoBehaviour
             if (uiPopupPanels[i].popupPanelName == nameOfPopup)
             {
                 uiPopupPanels[i].gameObject.SetActive(true);
+                Debug.Log("Show Panel");
             }
         }
     }

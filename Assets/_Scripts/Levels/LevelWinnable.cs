@@ -3,7 +3,7 @@ using UnityEngine;
 /// <summary>
 /// Manage of level winning.
 /// </summary>
-public class LevelWinable : MonoBehaviour
+public class LevelWinnable : MonoBehaviour
 {
     [Header("Component Settings")]
     [Tooltip("Whether this level winnable or not.")]
@@ -12,6 +12,16 @@ public class LevelWinable : MonoBehaviour
     public int defeatForWin = 0;
     [Tooltip("How many enemies defeated in current moment.")]
     public int defeatedEnemies = 0;
+
+
+    private void OnEnable()
+    {
+        GameEvents.OnLevelCompliete += WinLevel;
+    }
+    private void OnDisable()
+    {
+        GameEvents.OnLevelCompliete -= WinLevel;
+    }
 
 
     /// <summary>
@@ -26,9 +36,9 @@ public class LevelWinable : MonoBehaviour
     /// Show popup pnale of win and freez scene.
     /// </summary>
     /// <param name="nameOfPopupPanel"></param>
-    public void WinLevel(string nameOfPopupPanel)
-    {      
-        GetComponent<GameEvents>().ShowPopupPanel(nameOfPopupPanel);
+    private void WinLevel()
+    {
+        GetComponent<GameEvents>().ShowPopupPanel("Win");
         Time.timeScale = 0;       
     }
 }

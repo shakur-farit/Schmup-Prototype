@@ -135,7 +135,7 @@ public class Enemy : MonoBehaviour
     {
         if (GameManager.instance != null)
         {
-            GameManager.instance.GetComponent<LevelWinable>().IncrementDefeatedEnemies();
+            GameManager.instance.GetComponent<LevelWinnable>().IncrementDefeatedEnemies();
         }
     }
 
@@ -144,9 +144,10 @@ public class Enemy : MonoBehaviour
      /// </summary>
     private void CheckLevelWin()
     {
-        if(GameManager.instance.GetComponent<LevelWinable>().defeatedEnemies >= GameManager.instance.GetComponent<LevelWinable>().defeatForWin)
+        if((GameManager.instance.GetComponent<LevelWinnable>().defeatedEnemies >= GameManager.instance.GetComponent<LevelWinnable>().defeatForWin)
+            && GameManager.instance.GetComponent<LevelWinnable>().isLevelWinable)
         {
-            GameManager.instance.GetComponent<LevelWinable>().WinLevel("Win");
+            GameManager.instance.GetComponent<GameEvents>().LevelComplite();
         }
     }
 

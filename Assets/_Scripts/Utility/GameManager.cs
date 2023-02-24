@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -54,14 +52,6 @@ public class GameManager : MonoBehaviour
             DestroyImmediate(this);
         }
     }
-
-    private void Start()
-    {
-        if(SceneManager.GetActiveScene().name != "MainMenu")
-            GetComponent<EnemiesCounter>().SetUpEnemies();
-    }
-
-
 
     /// <summary>
     /// Description:

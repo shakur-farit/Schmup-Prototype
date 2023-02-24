@@ -8,15 +8,20 @@ public class EnemiesCounter : MonoBehaviour
     [HideInInspector]
     public int amountOfEnemies = 0;
 
+    private void Start()
+    {
+       SetUpEnemies();
+    }
+
     /// <summary>
     /// Find all enemies in the scene.
     /// </summary>
-    public void SetUpEnemies()
+    private void SetUpEnemies()
     {
         Enemy[] enemies = FindObjectsOfType<Enemy>();
         amountOfEnemies = enemies.Length;
 
-        if (amountOfEnemies < GetComponent<LevelWinable>().defeatForWin)
+        if (amountOfEnemies < GetComponent<LevelWinnable>().defeatForWin)
             Debug.LogWarning("Amount Of Enemies can't be lower than Defeat For Win");
     }
 }

@@ -2416,7 +2416,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 252499611831037665, guid: 575bce5f7304da946b6db79ae60cfb10, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: LevelMapOne
+      value: MapSelection
       objectReference: {fileID: 0}
     - target: {fileID: 252499611831037665, guid: 575bce5f7304da946b6db79ae60cfb10, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
@@ -4987,6 +4987,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2065390350}
+    - target: {fileID: 1669705421011879657, guid: b6b0922e8bb42b447b0758bf8d2ce069, type: 3}
+      propertyPath: levelIndex
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1669705421011879658, guid: b6b0922e8bb42b447b0758bf8d2ce069, type: 3}
       propertyPath: levelButtons.Array.data[0]
       value: 

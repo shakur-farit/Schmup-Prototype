@@ -17,6 +17,9 @@ public class GameEvents : MonoBehaviour
     public static event loadByNameAction OnShowPopupPanel;
     public static event loadByNameAction OnBackButton;
 
+    //Level complete event
+    public delegate void levelCompliete();
+    public static event levelCompliete OnLevelCompliete;
 
 
     public void ShowPopupPanel(string popupPanelName)
@@ -59,5 +62,11 @@ public class GameEvents : MonoBehaviour
     {
         if (OnQuitButton != null)
             OnQuitButton();
+    }
+
+    public void LevelComplite()
+    {
+        if (OnLevelCompliete != null)
+            OnLevelCompliete();
     }
 }
