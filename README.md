@@ -86,6 +86,9 @@ It counts current score and saves largest value *(Uses Player Prefs)*
 ### **Level Winnable System**
 It is triggered after the specified number of enemies have been destroyed.
 
+### **Next Level Unlock System**
+After complete level unlock next. Also unlock next Level Map after completed last level in current Map.
+
 ### **Effects**
 1. Projectiles - *Machinegun, Fireball*
 2. Laser.
