@@ -84,10 +84,17 @@ While using static camera if you need Player not to go out of camera vision use 
 It counts current score and saves largest value *(Uses Player Prefs)*
 
 ### **Level Winnable System**
-It is triggered after the specified number of enemies have been destroyed.
+1. It is triggered after the specified number of enemies have been destroyed.
+2. It is triggered after boss defeat.
+3. It is triggered after accross final line.
 
 ### **Next Level Unlock System**
 After complete level unlock next. Also unlock next Level Map after completed last level in current Map.
+
+### **Check By Position**
+1. Destroy depending by position.
+2. Destructable or not depending by position.
+3. Can shoot or not depending by position
 
 ### **Effects**
 1. Projectiles - *Machinegun, Fireball*
