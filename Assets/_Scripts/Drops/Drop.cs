@@ -7,7 +7,7 @@ public class Drop : MonoBehaviour
 {
     [Header("Drop's Components.")]
     [Tooltip("Which kind of drop on this.")]
-    public DropsMode dropMode = DropsMode.Shield;
+    public DropsModes dropMode = DropsModes.Shield;
     [Tooltip("Number of receive healing from Small Heal drop.")]
     [SerializeField] private int smallHeal;
     [Tooltip("Number of receive healing from Large Heal drop.")]
@@ -28,7 +28,7 @@ public class Drop : MonoBehaviour
                 // If droped shield.
                 switch (dropMode)
                 {
-                    case DropsMode.Shield:
+                    case DropsModes.Shield:
                         if(!shield.hasShield)
                             // activate it.
                             shield.ActivateShield();
@@ -43,10 +43,10 @@ public class Drop : MonoBehaviour
                 // If droped health.
                 switch (dropMode)
                 {
-                    case DropsMode.SmallHeal:
+                    case DropsModes.SmallHeal:
                         health.ReceiveHealing(smallHeal);
                         break;
-                    case DropsMode.LargeHeal:
+                    case DropsModes.LargeHeal:
                         health.ReceiveHealing(largeHeal);
                         break;
                 }
@@ -59,15 +59,15 @@ public class Drop : MonoBehaviour
                 // If droped weapon.
                 switch (dropMode)
                 {
-                    case DropsMode.MachinegunWeapon:
+                    case DropsModes.MachinegunWeapon:
                         indexOfDropedWeapon = 1;
                         weaponSwitcher.WeaponsSwitch(indexOfDropedWeapon);
                         break;
-                    case DropsMode.FireballWeapon:
+                    case DropsModes.FireballWeapon:
                         indexOfDropedWeapon = 2;
                         weaponSwitcher.WeaponsSwitch(indexOfDropedWeapon);
                         break;
-                    case DropsMode.LazerWeapon:
+                    case DropsModes.LazerWeapon:
                         indexOfDropedWeapon = 3;
                         weaponSwitcher.WeaponsSwitch(indexOfDropedWeapon);
                         break;
@@ -80,15 +80,15 @@ public class Drop : MonoBehaviour
 
                 switch (dropMode)
                 {
-                    case DropsMode.WeaponPowerLevelOne:
+                    case DropsModes.WeaponPowerLevelOne:
                         indexOfPowerLevel = 1;
                         weaponPower.LevelPowerSwicth(indexOfPowerLevel);
                         break;
-                    case DropsMode.WeaponPowerLevelTwo:
+                    case DropsModes.WeaponPowerLevelTwo:
                         indexOfPowerLevel = 2;
                         weaponPower.LevelPowerSwicth(indexOfPowerLevel);
                         break;
-                    case DropsMode.WeaponPowerLevelThree:
+                    case DropsModes.WeaponPowerLevelThree:
                         indexOfPowerLevel = 3;
                         weaponPower.LevelPowerSwicth(indexOfPowerLevel);
                         break;

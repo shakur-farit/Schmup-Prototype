@@ -1,10 +1,7 @@
-
-// Enums of enemy.
-
 /// <summary>
 /// Enum to help with shooting modes of enemy
 /// </summary>
-public enum ShootMode { None, ShootAll };
+public enum ShootModes { None, ShootAll };
 
 /// <summary>
 /// Enum to help with different movement modes of enemy
@@ -12,7 +9,6 @@ public enum ShootMode { None, ShootAll };
 public enum EnemyMovementModes { NoMovement, FollowTarget, Scroll };
 
 
-// Enums of player.
 
 /// <summary>
 /// Enum which stores different aiming modes of player
@@ -30,14 +26,20 @@ public enum MovementModes { MoveHorizontally, MoveVertically, MoveToward, FreeRo
 public enum TowardMovementModes { HorizontallyMove, VerticallyMove }
 
 
-// Enums of drops.
 
 /// <summary>
 /// Enum to handle different drops from enemies.
 /// </summary>
-public enum DropsMode
+public enum DropsModes
 {
     SmallHeal, LargeHeal, Shield, MachinegunWeapon, FireballWeapon, LazerWeapon,
     WeaponPowerLevelOne, WeaponPowerLevelTwo, WeaponPowerLevelThree
 }
+
+
+
+/// <summary>
+/// Enum to handle different axis to check by position.
+/// </summary>
+public enum CheckByPositionModes { ByAxisX, ByAxisY }
 

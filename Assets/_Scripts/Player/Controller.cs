@@ -84,7 +84,7 @@ public class Controller : MonoBehaviour
     {
         if (inputManager == null)
         {
-            inputManager = InputManager.instance;
+            inputManager = FindObjectOfType<InputManager>();
         }
         if (inputManager == null)
         {

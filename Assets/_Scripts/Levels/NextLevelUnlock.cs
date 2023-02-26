@@ -13,8 +13,6 @@ public class NextLevelUnlock : MonoBehaviour
     [Tooltip("The button at index in this array will be unlocked when the level at index equal " +
         "to the value contained in array \"indexToUnlockNextLevel\" at index equal to index of THIS array, is completed.")]
     public GameObject[] levelButtons;
- 
-    private int completedLevel = 0;
 
 
     private void Start()

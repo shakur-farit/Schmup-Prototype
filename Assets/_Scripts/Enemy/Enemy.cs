@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour
     [Tooltip("The way the enemy shoots:\n" +
         "None: Enemy does not shoot.\n" +
         "ShootAll: Enemy fires all guns whenever it can.")]
-    public ShootMode shootMode = ShootMode.ShootAll;
+    public ShootModes shootMode = ShootModes.ShootAll;
 
 
     [Tooltip("The way this enemy will move\n" +
@@ -64,10 +64,13 @@ public class Enemy : MonoBehaviour
     {
         if (movementMode == EnemyMovementModes.FollowTarget && followTarget == null)
         {
-            if (GameManager.instance != null && GameManager.instance.player != null)
+            if (GameManager.instance != null)
             {
-                followTarget = GameManager.instance.player.transform;
+                if(GameManager.instance.player != null)
+                    followTarget = GameManager.instance.player.transform;
             }
+            else
+                Debug.LogWarning("There is no game manager in the scene, there needs to be one for correctly work enemy's fallow movement.");
         }
     }
 
@@ -117,10 +120,12 @@ public class Enemy : MonoBehaviour
     /// </summary>
     private void AddToScore()
     {
-        if (GameManager.instance != null /*&& !GameManager.instance.gameIsOver*/)
+        if (GameManager.instance != null)
         {
             GameManager.instance.GetComponent<Score>().AddScore(scoreValue);
         }
+        else
+            Debug.LogWarning("There is no game manager in the scene, there needs to be one for correctly work of score.");
     }
 
     /// <summary>
@@ -137,6 +142,8 @@ public class Enemy : MonoBehaviour
         {
             GameManager.instance.GetComponent<LevelWinnable>().IncrementDefeatedEnemies();
         }
+        else
+            Debug.LogWarning("There is no game manager in the scene, there needs to be one for correctly work of defeated enemies increment.");
     }
 
      /// <summary>
@@ -144,11 +151,20 @@ public class Enemy : MonoBehaviour
      /// </summary>
     private void CheckLevelWin()
     {
-        if((GameManager.instance.GetComponent<LevelWinnable>().defeatedEnemies >= GameManager.instance.GetComponent<LevelWinnable>().defeatForWin)
-            && GameManager.instance.GetComponent<LevelWinnable>().isLevelWinable)
+        if (GameManager.instance != null)
         {
-            GameManager.instance.GetComponent<GameEvents>().LevelComplite();
+            if ((GameManager.instance.GetComponent<LevelWinnable>().defeatedEnemies >= GameManager.instance.GetComponent<LevelWinnable>().defeatForWin)
+                && GameManager.instance.GetComponent<LevelWinnable>().isLevelWinnableWithEnemiyDefeat)
+            {
+                GameManager.instance.GetComponent<GameEvents>().LevelComplite();
+            }
+            else if (GameManager.instance.GetComponent<LevelWinnable>().isLevelWinnableWithBossDefeat)
+            {
+                GameManager.instance.GetComponent<GameEvents>().LevelComplite();
+            }
         }
+        else
+            Debug.LogWarning("There is no game manager in the scene, there needs to be one for correctly work of level winnable checking.");
     }
 
     /// <summary>
@@ -238,12 +254,12 @@ public class Enemy : MonoBehaviour
     {
         switch (shootMode)
         {
-            case ShootMode.None:
+            case ShootModes.None:
                 break;
-            case ShootMode.ShootAll:
+            case ShootModes.ShootAll:
                 foreach (ShootingController gun in guns)
                 {
-                    gun.Fire();
+                    gun.CheckByPositionToFire();
                 }
                 break;
         }

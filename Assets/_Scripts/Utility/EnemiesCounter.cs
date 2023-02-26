@@ -4,8 +4,7 @@ using UnityEngine;
 /// This class count enemies.
 /// </summary>
 public class EnemiesCounter : MonoBehaviour
-{
-    [HideInInspector]
+{ 
     public int amountOfEnemies = 0;
 
     private void Start()

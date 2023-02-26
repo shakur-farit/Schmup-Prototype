@@ -24,6 +24,10 @@ public class ShootingController : MonoBehaviour
         " shooting controller is facing and the direction projectiles are launched.")]
     public float projectileSpread = 1.0f;
 
+    [Header("Position Check Settings")]
+    [Tooltip("Whether use \"ShootByPosition\" component or not.")]
+    public bool usePositionCheck = false;
+
     // The last time this component was fired
     private float lastFired = Mathf.NegativeInfinity;
 
@@ -97,7 +101,7 @@ public class ShootingController : MonoBehaviour
         {
             projectileHolder = GameObject.Find("ProjectileHolder");
 
-            if(projectileHolder == null)
+            if (projectileHolder == null)
             {
                 Debug.Log("Create the Empty Object with \"ProjectileHolder\" name to hold projectiles in it. ");
             }
@@ -118,13 +122,38 @@ public class ShootingController : MonoBehaviour
         {
             if (inputManager.firePressed || inputManager.fireHeld)
             {
-                Fire();
+                CheckByPositionToFire();
             }
-        } 
+        }
+        else
+        {
+            CheckByPositionToFire();
+        }
+    }
+
+    /// <summary>
+    /// If use position check, check it and call Fire().
+    /// </summary>
+    public void CheckByPositionToFire()
+    {
+        if (usePositionCheck)
+        { 
+            ShootByPosition checker = GetComponent<ShootByPosition>();
+
+            if (checker != null)
+            {
+                if(checker.canShoot)
+                    Fire();
+            }
+            else
+            {
+                Debug.LogWarning("You must attach \"ShootByPosition\" component to object with \"ShootingController\".");
+            }
+        }
         else
         {
             Fire();
-        }
+        }     
     }
 
     /// <summary>
@@ -136,7 +165,7 @@ public class ShootingController : MonoBehaviour
     /// void (no return)
     /// </summary>
     public virtual void Fire()
-    {
+    {       
         // If the cooldown is over fire a projectile
         if ((Time.timeSinceLevelLoad - lastFired) > fireRate)
         {
@@ -146,16 +175,13 @@ public class ShootingController : MonoBehaviour
             // If projectile has damage VFX instantiate it
             if (projectilePrefab.GetComponent<ShootDamageVFX>() != null)
             {
-                ShootDamageVFX _VFX = projectilePrefab.GetComponent<ShootDamageVFX>();
-                _VFX.ShootVFXInstantiate(gameObject);                
+                        ShootDamageVFX _VFX = projectilePrefab.GetComponent<ShootDamageVFX>();
+                        _VFX.ShootVFXInstantiate(gameObject);
             }
-
-            // Restart the cooldown
-            lastFired = Time.timeSinceLevelLoad;  
+             // Restart the cooldown
+             lastFired = Time.timeSinceLevelLoad;
         }
-
     }
-
 
     /// <summary>
     /// Description:

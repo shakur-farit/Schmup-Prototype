@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1779331589491351574}
   - component: {fileID: 1779331588403453717}
+  - component: {fileID: -484026892872359827}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -50,6 +51,21 @@ MonoBehaviour:
   isPlayerControlled: 1
   fireRate: 0.7
   projectileSpread: 1
+  canShoot: 1
+--- !u!114 &-484026892872359827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779331589491351575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4cb7368f83d8f6468ee86fcbab8fd9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  positionToShoot: {x: 0, y: 0, z: 0}
+  checkByPositionMode: 1
 --- !u!1 &8577864251761802264
 GameObject:
   m_ObjectHideFlags: 0

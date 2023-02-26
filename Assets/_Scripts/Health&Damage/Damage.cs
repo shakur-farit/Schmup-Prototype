@@ -41,22 +41,38 @@ public class Damage : MonoBehaviour
         Health collidedHealth = collisionGameObject.GetComponent<Health>();
         // Find Shield component on collided game object.
         Shield shield = collisionGameObject.GetComponent<Shield>();
+        // Find Enemy component on collided game object.
+        Enemy enemy = collisionGameObject.GetComponent<Enemy>();
 
 
         if (collidedHealth != null)
         {
             if (collidedHealth.teamId != this.teamId)
             {
-                // if this object have shield
+                // if collided object have shield
                 if (shield != null && shield.hasShield)
                 {
-                    // Deal damage to the shield.
-                    shield.TakeDamage(damageAmount);
+                    if (enemy != null)
+                    {
+                        if(enemy.GetComponent<DestroyByPosition>().isDestructable)
+                            // Deal damage to the shield.
+                            shield.TakeDamage(damageAmount);
+                    } 
+                    else
+                        // Deal damage to the shield.
+                        shield.TakeDamage(damageAmount);
                 }
                 else
                 {
-                    // Deal damage to the object.
-                    collidedHealth.TakeDamage(damageAmount);
+                    if (enemy != null)
+                    {
+                        if (enemy.GetComponent<DestroyByPosition>().isDestructable)
+                            // Deal damage to the object.
+                            collidedHealth.TakeDamage(damageAmount);
+                    }
+                    else
+                        // Deal damage to the object.
+                        collidedHealth.TakeDamage(damageAmount);                       
                 }
 
                 if (gameObject.GetComponent<ShootDamageVFX>() != null)
